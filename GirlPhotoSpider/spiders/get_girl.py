@@ -28,7 +28,7 @@ class GetGirlSpider(scrapy.Spider):
         # 初始下载延迟(单位:秒)
         # 'AUTOTHROTTLE_START_DELAY': 10,
         # 在高延迟情况下最大的下载延迟(单位秒)
-        # 'AUTOTHROTTLE_MAX_DELAY': 60,
+        'AUTOTHROTTLE_MAX_DELAY': 60,
     }
 
     def parse(self, response):
