@@ -35,7 +35,6 @@ class GetGirlSpider(scrapy.Spider):
         self.log(response.headers)
         # 获取所有的图片, 以列表形式保存到 image_urls 字段中。
         pic_list = response.xpath("/html/body/div[3]/div[8]/ul/li/a/img/@src").extract()  # extract() 传入 列表
-        print('开始咯===========')
         print(pic_list)
         if pic_list:
             item = PicsDownloadItem()
